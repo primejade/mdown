@@ -695,8 +695,6 @@ rndr_doc_header(struct mdown_buf *ob,
         "\\usepackage{tabularx}\n"
         "\\definecolor{backcolour}{rgb}{0.95,0.95,0.92}\n"
         "\\definecolor{mygreen}{rgb}{0.0, 0.3, 0.0}\n"
-        "\\definecolor{mygray}{gray}{0.5}\n"
-        "\\definecolor{comcolor}{rgb}{0.65, 0.48, 0.36}\n"
         "\n"
         "\\titleformat{\\section} {\\Large \\bfseries}{}{3pt}{}\%[{\\titlerule[1pt]}]\n"
         "\\titlespacing{\\section}{1mm}{1mm}{5mm}\n"
