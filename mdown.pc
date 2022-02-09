@@ -1,0 +1,13 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=/usr/local/lib
+includedir=/usr/local/include
+
+Name: mdown
+Description: simple markdown translator library
+URL: https://kristaps.bsd.lv/mdown
+Version: 0.10.0
+Requires:
+Libs.private: 
+Libs: -L${libdir} -lmdown -lm
+Cflags: -I${includedir}
