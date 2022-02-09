@@ -731,13 +731,13 @@ rndr_doc_header(struct mdown_buf *ob,
 	/* Overrides. */
 
 	if (title == NULL)
-		title = "مقاله بدون عنوان";
+		title = "نوشته بدون عنوان";
 	if (rcsauthor != NULL)
 		author = rcsauthor;
 	if (rcsdate != NULL)
 		date = rcsdate;
 
-	if (!hbuf_printf(ob, "\\title{%s}\n", title))
+	if (!hbuf_printf(ob, "\\title{\\textbf{%s}}\n", title))
 		return 0;
 
 	if (author != NULL) {
@@ -753,7 +753,7 @@ rndr_doc_header(struct mdown_buf *ob,
 	if (date != NULL && !hbuf_printf(ob, "\\date{%s}\n", date))
 		return 0;
 
-	return HBUF_PUTSL(ob, "\\maketitle\n\%\\pagenumbering{alph}\n\\vspace{4cm}\n\%\\tableofcontents\n\%\\vfill\\newpage\n\%\\pagenumbering{arabic}\n");
+	return HBUF_PUTSL(ob, "\\maketitle\n\%\\pagenumbering{alph}\n\\vspace{2cm}\n\%\\tableofcontents\n\%\\vfill\\newpage\n\%\\pagenumbering{arabic}\n");
 }
 
 static int
