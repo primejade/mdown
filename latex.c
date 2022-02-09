@@ -739,7 +739,7 @@ rndr_doc_header(struct mdown_buf *ob,
 	if (rcsdate != NULL)
 		date = rcsdate;
 
-	if (!hbuf_printf(ob, "\\title{%s}\n", title))
+	if (!hbuf_printf(ob, "\\title{\\textbf{%s}}\n", title))
 		return 0;
 
 	if (author != NULL) {
