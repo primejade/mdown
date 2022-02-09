@@ -1,18 +1,19 @@
 # mdown
-a fork of BSD's lowdown markdown convertor
+a fork of BSD's lowdown markdown converter
 
 ## What did I add?
 
+**Flags**
 - `latex`
-    1. `fancyvrb` package
-    1. `setspace` package
-    1. `titlesec` package
-    1. `\code{}` macro fo in-line code
-    1. bold `title:`
+    - `fancyvrb` package
+    - `setspace` package
+    - `titlesec` package
+    - `\code{}` macro to in-line code
+    - bold `title:`
 
 - `ms`
-    1. [un]checked box character
-    1. fixed [un]ordered list items issues
+    - [un]checked box character
+    - fixed [un]ordered list items issues
 
 **New**
 - `xelatex` flag for generating *Persian* PDFs
