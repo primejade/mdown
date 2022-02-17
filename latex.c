@@ -665,7 +665,7 @@ rndr_doc_footer(struct mdown_buf *ob, const struct latex *st)
 {
 
 	if (st->oflags & MDOWN_STANDALONE)
-		return HBUF_PUTSL(ob, "\\end{document}\n");
+		return HBUF_PUTSL(ob, "\n\\end{document}\n");
 	return 1;
 }
 
@@ -687,9 +687,9 @@ rndr_doc_header(struct mdown_buf *ob,
 			"\\usepackage[margin=2cm]{geometry}\n"
 			"\\usepackage{xcolor,graphicx,fancyvrb}\n"
 			"\\usepackage{enumitem,amssymb,ulem}\n"
+			"\\usepackage{newtxmath,newtxtext}\n"
+			"\\usepackage{titlesec,titling}\n"
 			"\\usepackage{multicol}\n"
-			"\\usepackage{titlesec}\n"
-			"\\usepackage{titling}\n"
 			"\\usepackage{setspace}\n"
 			"\\usepackage{hyperref}\n"
 			"\\hypersetup{\n"
@@ -712,7 +712,7 @@ rndr_doc_header(struct mdown_buf *ob,
 			"\\setlength{\\headheight}{-13pt}\n"
 			"\\onehalfspacing\n"
 			"\\newcommand{\\code}[1]{\\colorbox{white!90!black}{\\ttfamily #1}}\n"
-			"\%\\renewcommand{\\familydefault}{\\sfdefault}\n"
+			"\%\\renewcommand{\\familydefault}{\\sfdefault}\n\n"
 			"\\begin{document}\n"))
 		return 0;
 
